@@ -1,9 +1,15 @@
-export type SpeciesEnum =
-    | "Dog"
-    | "Cat"
-    | "Rabbit"
-    | "Small & Furry"
-    | "Horse"
+type SpeciesEnum =
+    | "Barnyard"
     | "Bird"
+    | "Cat"
+    | "Dog"
+    | "Horse"
+    | "Rabbit"
     | "Scales, Fins & Other"
-    | "Barnyard";
+    | "Small & Furry";
+
+export default interface AnimalInfo {
+    id: number;
+    name: string;
+    species: SpeciesEnum;
+}
