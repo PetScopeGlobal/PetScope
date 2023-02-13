@@ -1,12 +1,13 @@
-export type ColoursEnum =
-    | BarnyardColoursEnum
-    | BirdColoursEnum
-    | CatColoursEnum
-    | DogColoursEnum
-    | HorseColoursEnum
-    | RabbitColoursEnum
-    | ScalesColoursEnum
-    | SmallColoursEnum;
+export type ColoursEnum = {
+    "Barnyard": BarnyardColoursEnum;
+    "Bird": BirdColoursEnum;
+    "Cat": CatColoursEnum;
+    "Dog": DogColoursEnum;
+    "Horse": HorseColoursEnum;
+    "Rabbit": RabbitColoursEnum;
+    "Scales, Fins & Other": ScalesColoursEnum;
+    "Small & Furry": SmallColoursEnum;
+};
 
 type BarnyardColoursEnum =
     | "Agouti"

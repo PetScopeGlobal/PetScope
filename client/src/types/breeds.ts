@@ -1,12 +1,13 @@
-export type BreedEnums =
-    | BarnyardBreedEnum
-    | BirdBreedEnum
-    | CatBreedEnum
-    | DogBreedEnum
-    | HorseBreedEnum
-    | RabbitBreedEnum
-    | ScalesFinsOtherBreedEnum
-    | SmallAndFurryBreedEnum;
+export type BreedEnums = {
+    "Barnyard": BarnyardBreedEnum;
+    "Bird": BirdBreedEnum;
+    "Cat": CatBreedEnum;
+    "Dog": DogBreedEnum;
+    "Horse": HorseBreedEnum;
+    "Rabbit": RabbitBreedEnum;
+    "Scales, Fins & Other": ScalesFinsOtherBreedEnum;
+    "Small & Furry": SmallAndFurryBreedEnum;
+};
 
 type BarnyardBreedEnum =
     | "Alpaca"

@@ -1,12 +1,13 @@
-export type CoatsEnum =
-    | BarnyardCoatsEnum
-    | BirdCoatsEnum
-    | CatCoatsEnum
-    | DogCoatsEnum
-    | HorseCoatsEnum
-    | RabbitCoatsEnum
-    | ScalesCoatsEnum
-    | SmallCoatsEnum;
+export type CoatsEnum = {
+    "Barnyard": BarnyardCoatsEnum;
+    "Bird": BirdCoatsEnum;
+    "Cat": CatCoatsEnum;
+    "Dog": DogCoatsEnum;
+    "Horse": HorseCoatsEnum;
+    "Rabbit": RabbitCoatsEnum;
+    "Scales, Fins & Other": ScalesCoatsEnum;
+    "Small & Furry": SmallCoatsEnum;
+};
 
 type BarnyardCoatsEnum = "Short" | "Long";
 
