@@ -1,16 +1,25 @@
+export type CoatsEnum =
+    | BarnyardCoatsEnum
+    | BirdCoatsEnum
+    | CatCoatsEnum
+    | DogCoatsEnum
+    | HorseCoatsEnum
+    | RabbitCoatsEnum
+    | ScalesCoatsEnum
+    | SmallCoatsEnum;
 
-export type DogCoatsEnum = "Hairless" | "Short" | "Medium" | "Long" | "Wire" | "Curly"
+type BarnyardCoatsEnum = "Short" | "Long";
 
-export type CatCoatsEnum = "Hairless" | "Short" | "Medium" | "Long"
+type BirdCoatsEnum = [];
 
-export type BirdCoatsEnum = []
+type CatCoatsEnum = "Hairless" | "Short" | "Medium" | "Long";
 
-export type ScalesCoatsEnum = []
+type DogCoatsEnum = "Hairless" | "Short" | "Medium" | "Long" | "Wire" | "Curly";
 
-export type HorseCoatsEnum = []
+type HorseCoatsEnum = [];
 
-export type RabbitCoatsEnum = 'Short' | 'Long'
+type RabbitCoatsEnum = "Short" | "Long";
 
-export type BarnyardCoatsEnum = 'Short' | 'Long'
+type ScalesCoatsEnum = [];
 
-export type SmallCoatsEnum = 'Hairless' | 'Short' | 'Long'
+type SmallCoatsEnum = "Hairless" | "Short" | "Long";
