@@ -1,6 +1,7 @@
 import { Client } from "@petfinder/petfinder-js";
 import { useEffect, useState } from "react";
 import "../styles/App.css";
+import { Animal } from "../types";
 
 const { REACT_APP_CLIENT_ID, REACT_APP_CLIENT_SECRET } = process.env;
 if (!(REACT_APP_CLIENT_ID && REACT_APP_CLIENT_SECRET)) {
@@ -13,29 +14,16 @@ const client = new Client({
 });
 
 export default function App() {
-    const [animals, setAnimals] = useState([]);
+    const [animals, setAnimals] = useState<Animal[]>([]);
 
     useEffect(() => {
         console.log("App useEffect triggered");
 
-        client.animalData
-            .types()
-            .then(types => {
-                console.log(types);
-                for (const type of types.data.types) {
-                    client.animalData.breeds(type.name).then(async breeds => {
-                        const typeResp = await client.animalData.type(type.name);
-                        console.log({ type, breeds: breeds.data, typeResp: typeResp.data });
-                    });
-                }
-            })
-            .catch(console.error);
-
         client.animal
-            .search()
+            .search({ limit: 100 })
             .then(resp => {
                 console.log(resp.data);
-                setAnimals(resp.data.animals);
+                setAnimals(resp.data.animals as Animal[]);
             })
             .catch(console.error);
     }, []);
@@ -43,8 +31,18 @@ export default function App() {
     return (
         <div className="App">
             <header className="App-header">
-                {animals.map((animal: Record<"id", number>) => {
-                    return <p key={animal.id}>{animal.id}</p>;
+                {animals.map(animal => {
+                    return (
+                        <section key={animal.id}>
+                            <h3>{animal.type}</h3>
+                            {animal.primary_photo_cropped && (
+                                <img src={animal.primary_photo_cropped.small} alt="Pet"></img>
+                            )}
+                            <p>
+                                {animal.name} - {animal.age}
+                            </p>
+                        </section>
+                    );
                 })}
             </header>
         </div>
