@@ -15,7 +15,7 @@ const client = new Client({
 
 export default function App() {
     const [animals, setAnimals] = useState<AnimalResponse["animals"]>([]);
-    const [organisations, setOrginisations] = useState<OrganisationResponse["organizations"]>([]);
+    const [organisations, setOrganisations] = useState<OrganisationResponse["organizations"]>([]);
 
     useEffect(() => {
         console.log("App useEffect triggered");
@@ -33,7 +33,7 @@ export default function App() {
             .search({ limit: 10 })
             .then(resp => {
                 const data: OrganisationResponse = resp.data;
-                setOrginisations(data.organizations);
+                setOrganisations(data.organizations);
             })
             .catch(console.error);
     }, []);
