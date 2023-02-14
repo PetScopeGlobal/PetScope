@@ -1,7 +1,7 @@
 import { Client } from "@petfinder/petfinder-js";
 import { useEffect, useState } from "react";
 import "../styles/App.css";
-import { Animal } from "../types";
+import { AnimalResponse, OrganisationResponse } from "../types";
 
 const { REACT_APP_CLIENT_ID, REACT_APP_CLIENT_SECRET } = process.env;
 if (!(REACT_APP_CLIENT_ID && REACT_APP_CLIENT_SECRET)) {
@@ -14,16 +14,26 @@ const client = new Client({
 });
 
 export default function App() {
-    const [animals, setAnimals] = useState<Animal[]>([]);
+    const [animals, setAnimals] = useState<AnimalResponse["animals"]>([]);
+    const [organisations, setOrganisations] = useState<OrganisationResponse["organizations"]>([]);
 
     useEffect(() => {
         console.log("App useEffect triggered");
 
         client.animal
-            .search({ limit: 100 })
+            .search({ limit: 10 })
             .then(resp => {
                 console.log(resp.data);
-                setAnimals(resp.data.animals as Animal[]);
+                const data: AnimalResponse = resp.data;
+                setAnimals(data.animals);
+            })
+            .catch(console.error);
+
+        client.organization
+            .search({ limit: 10 })
+            .then(resp => {
+                const data: OrganisationResponse = resp.data;
+                setOrganisations(data.organizations);
             })
             .catch(console.error);
     }, []);
@@ -31,6 +41,7 @@ export default function App() {
     return (
         <div className="App">
             <header className="App-header">
+                <h2>Animals</h2>
                 {animals.map(animal => {
                     return (
                         <section key={animal.id}>
@@ -41,6 +52,17 @@ export default function App() {
                             <p>
                                 {animal.name} - {animal.age}
                             </p>
+                        </section>
+                    );
+                })}
+                <h2>Organisations</h2>
+                {organisations.map(organisation => {
+                    return (
+                        <section key={organisation.id}>
+                            <h3>{organisation.name}</h3>
+                            {organisation.photos[0] && (
+                                <img src={organisation.photos[0].small} alt="Organisation"></img>
+                            )}
                         </section>
                     );
                 })}
