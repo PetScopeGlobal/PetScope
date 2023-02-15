@@ -1,4 +1,14 @@
+:root {
+  --white: #F6F2F3;
+  --light: #8ad4eb;
+  --main: #157A9C;
+  --accent: #B53F5A;
+  --dark: #232331;
+  --background: #2f323d;
+}
+
 body {
+  background-color: var(--background);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -6,8 +16,66 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+main {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h2 {
+  color: var(--light);
+}
+select {
+  min-width: 60vw;
+  height: 2rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+
+.home-pet-org-container {
+  display: flex;
+  place-items: center;
+}
+.home-pet-org {
+  border: 2px solid var(--light);
+  border-radius: 5px;
+  background-color: var(--main);
+  color: var(--white);
+  width: 10rem;
+  height: 8rem;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+.highlighted {
+  scale: 1.2;
+  border: 2px solid var(--light);
+  box-shadow: 0 0 3px 1px var(--white);
+}
+.lowlighted {
+  opacity: 70%;
+}
+
+.filter-section-container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  text-align: center;
+}
+
+.home-search-btn {
+  margin-top: 1rem;
+  border: 2px solid var(--light);
+  border-radius: 5px;
+  background-color: var(--main);
+  color: var(--white);
+  width: 6rem;
+  height: 3rem;
+  font-size: 1rem;
 }
