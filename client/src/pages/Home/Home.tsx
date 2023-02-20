@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // components import
-import FilterSection from "../../molecules/FilterSection/FilterSection";
+import FilterSection from "../../components/molecules/FilterSection/FilterSection";
 
 // data import
 import speciesData from './data/speciesData.json'

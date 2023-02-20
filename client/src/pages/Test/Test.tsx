@@ -1,7 +1,7 @@
 import { Client } from "@petfinder/petfinder-js";
 import { useEffect, useState } from "react";
-import "../styles/App.css";
-import { AnimalResponse, OrganisationResponse } from "../types";
+import "../../styles/App.css";
+import { AnimalResponse, OrganisationResponse } from "../../types";
 
 const { REACT_APP_CLIENT_ID, REACT_APP_CLIENT_SECRET } = process.env;
 if (!(REACT_APP_CLIENT_ID && REACT_APP_CLIENT_SECRET)) {
@@ -13,7 +13,7 @@ const client = new Client({
     secret: REACT_APP_CLIENT_SECRET,
 });
 
-export default function App() {
+export default function Test() {
     const [animals, setAnimals] = useState<AnimalResponse["animals"]>([]);
     const [organisations, setOrganisations] = useState<OrganisationResponse["organizations"]>([]);
 
