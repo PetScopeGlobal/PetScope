@@ -1,4 +1,9 @@
-import FilterSectionPropType from "./FilterSection.types"
+interface FilterSectionPropType {
+  mappingArray: {displayText: string, valueText: string}[];
+  elementName: string;
+  filterValue?: undefined | string;
+  setFilterValue: React.Dispatch<React.SetStateAction<undefined|string>>;
+}
 
 export default function FilterSection(props: FilterSectionPropType) {
   function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
