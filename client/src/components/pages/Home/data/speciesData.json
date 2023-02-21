@@ -1,36 +1,36 @@
-{"speciesArray":
-  [
-    {
-      "displayText": "Barnyard",
-      "valueText": "Barnyard" 
-    },
-    {
-      "displayText": "Bird",
-      "valueText": "Bird"
-    }, 
-    {
-      "displayText": "Cat",
-      "valueText": "Cat"
-    }, 
-    {
-      "displayText": "Dog",
-      "valueText": "Dog"
-    }, 
-    {
-      "displayText": "Horse",
-      "valueText": "Horse"
-    }, 
-    {
-      "displayText": "Rabbit",
-      "valueText": "Rabbit"
-    }, 
-    {
-      "displayText": "Scales, Fins & Other",
-      "valueText": "Scales, Fins & Other"
-    }, 
-    {
-      "displayText": "Small & Furry",
-      "valueText": "Small & Furry"
-    }
-  ]
+{
+    "speciesArray": [
+        {
+            "displayText": "Barnyard",
+            "valueText": "Barnyard"
+        },
+        {
+            "displayText": "Bird",
+            "valueText": "Bird"
+        },
+        {
+            "displayText": "Cat",
+            "valueText": "Cat"
+        },
+        {
+            "displayText": "Dog",
+            "valueText": "Dog"
+        },
+        {
+            "displayText": "Horse",
+            "valueText": "Horse"
+        },
+        {
+            "displayText": "Rabbit",
+            "valueText": "Rabbit"
+        },
+        {
+            "displayText": "Scales, Fins & Other",
+            "valueText": "Scales, Fins & Other"
+        },
+        {
+            "displayText": "Small & Furry",
+            "valueText": "Small & Furry"
+        }
+    ]
 }
