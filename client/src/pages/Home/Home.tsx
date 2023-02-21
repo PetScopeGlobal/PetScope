@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 // components import
-import FilterSection from "../../molecules/FilterSection/FilterSection";
+import FilterSection from "../../components/molecules/FilterSection/FilterSection";
 
 // data import
 import speciesData from "./data/speciesData.json";
 import countriesData from "./data/countriesData.json";
 
 // types import
-import { filterArrayType } from "../../../types/pages/homeDataTypes";
+import { filterArrayType } from "../../types/pages/homeDataTypes";
 
 /*
     TODO: 
