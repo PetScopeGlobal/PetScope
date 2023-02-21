@@ -1,6 +1,5 @@
 import { Client } from "@petfinder/petfinder-js";
 import { useEffect, useState } from "react";
-import "../../styles/App.css";
 import { AnimalResponse, OrganisationResponse } from "../../types";
 
 const { REACT_APP_CLIENT_ID, REACT_APP_CLIENT_SECRET } = process.env;
