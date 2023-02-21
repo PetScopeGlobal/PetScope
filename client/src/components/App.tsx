@@ -1,18 +1,18 @@
-import { Client } from "@petfinder/petfinder-js";
-import { useEffect, useState } from "react";
+//import { Client } from "@petfinder/petfinder-js";
+//import { useEffect, useState } from "react";
 import "../styles/App.css";
-import { AnimalResponse, OrganisationResponse } from "../types";
+//import { AnimalResponse, OrganisationResponse } from "../types";
 import Home from "./pages/Home/Home";
 
-const { REACT_APP_CLIENT_ID, REACT_APP_CLIENT_SECRET } = process.env;
-if (!(REACT_APP_CLIENT_ID && REACT_APP_CLIENT_SECRET)) {
-    throw new Error("Missing REACT_APP_CLIENT_ID and/or REACT_APP_CLIENT_SECRET env variable");
-}
+// const { REACT_APP_CLIENT_ID, REACT_APP_CLIENT_SECRET } = process.env;
+// if (!(REACT_APP_CLIENT_ID && REACT_APP_CLIENT_SECRET)) {
+//     throw new Error("Missing REACT_APP_CLIENT_ID and/or REACT_APP_CLIENT_SECRET env variable");
+// }
 
-const client = new Client({
-    apiKey: REACT_APP_CLIENT_ID,
-    secret: REACT_APP_CLIENT_SECRET,
-});
+// const client = new Client({
+//     apiKey: REACT_APP_CLIENT_ID,
+//     secret: REACT_APP_CLIENT_SECRET,
+// });
 
 export default function App() {
     // const [animals, setAnimals] = useState<AnimalResponse["animals"]>([]);
@@ -40,7 +40,7 @@ export default function App() {
     // }, []);
 
     return (
-        <Home/>
+        <Home />
         // <div className="App">
         //     <header className="App-header">
         //         <h2>Animals</h2>
