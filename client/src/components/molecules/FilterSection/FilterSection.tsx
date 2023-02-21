@@ -12,8 +12,12 @@ export default function FilterSection(props: FilterSectionPropType) {
         <section className="filter-section-container">
             <h2>Filter By</h2>
             <select name={props.elementName} id={props.elementName} onChange={handleChange}>
-                {props.mappingArray.map(item => {
-                    return <option value={item.valueText}>{item.displayText}</option>;
+                {props.mappingArray.map((item, index) => {
+                    return (
+                        <option key={index} value={item.valueText}>
+                            {item.displayText}
+                        </option>
+                    );
                 })}
             </select>
         </section>
