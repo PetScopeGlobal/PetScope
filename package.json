@@ -1,0 +1,20 @@
+{
+    "name": "petscope",
+    "version": "1.0.0",
+    "description": "An interface for interacting with a pet adoption API.",
+    "main": "index.js",
+    "scripts": {
+        "start": "cd client && npm start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PetScopeGlobal/PetScope.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/PetScopeGlobal/PetScope/issues"
+    },
+    "homepage": "https://github.com/PetScopeGlobal/PetScope#readme"
+}
