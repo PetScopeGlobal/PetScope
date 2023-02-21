@@ -14,7 +14,7 @@ export default function FilterSection(props: FilterSectionPropType) {
             <select name={props.elementName} id={props.elementName} onChange={handleChange}>
                 {props.mappingArray.map((item, index) => {
                     return (
-                        <option key={index} value={item.valueText}>
+                        <option key={index} selected={index === 0} value={item.valueText}>
                             {item.displayText}
                         </option>
                     );
