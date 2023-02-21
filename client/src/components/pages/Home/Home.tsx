@@ -32,6 +32,7 @@ export default function Home() {
         setOrgClassName("home-pet-org lowlighted");
         // set webpage state to show value of button
         setShowPetOrg("pet");
+        setFilterValue(speciesArray[0].valueText);
     }
 
     function handleOrgClick() {
@@ -39,6 +40,7 @@ export default function Home() {
         setOrgClassName("home-pet-org highlighted");
         setPetClassName("home-pet-org lowlighted");
         setShowPetOrg("org");
+        setFilterValue(countriesArray[0].valueText);
     }
 
     function handleSearchClick() {
