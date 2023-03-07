@@ -38,11 +38,23 @@ select {
 }
 
 
-
+/*
+**************
+HOME
+**************
+*/
+/*CONTAINERS*/
 .home-pet-org-container {
   display: flex;
   place-items: center;
 }
+.filter-section-container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  text-align: center;
+}
+/*BUTTONS*/
 .home-pet-org {
   border: 2px solid var(--light);
   border-radius: 5px;
@@ -61,14 +73,6 @@ select {
 .lowlighted {
   opacity: 70%;
 }
-
-.filter-section-container {
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  text-align: center;
-}
-
 .home-search-btn {
   margin-top: 1rem;
   border: 2px solid var(--light);
